@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Gatsby Starter Personal Blog`,
-    author: `Gatsby`,
-    description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `golfson`,
+    author: `francis rodson d. clavel`,
+    description: `under maintenance`,
+    siteUrl: `https://golfson.netlify.com/`,
     social: {
-      twitter: `gatsbyjs`,
+      twitter: `donorsdonors`,
     },
   },
   plugins: [
@@ -108,7 +108,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // edit below
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `153088917`,
       },
     },
     {
