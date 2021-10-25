@@ -5,6 +5,7 @@ import { useFlexSearch } from "react-use-flexsearch"
 import * as queryString from "query-string"
 
 import { rhythm } from "../utils/typography"
+import AllPosts from "./allPosts"
 
 const SearchBar = styled.div`
 
@@ -64,7 +65,7 @@ const SearchedPosts = ({ results }) =>
               marginBottom: rhythm(1 / 4),
             }}
           >
-            <Link style={{ boxShadow: `none` }} to={`/blog${slug}`}>
+            <Link style={{ boxShadow: `none`, color:"black" }} to={`/blog${slug}`}>
               {title}
             </Link>
           </h3>
@@ -83,37 +84,9 @@ const SearchedPosts = ({ results }) =>
     </p>
   )
 
-const AllPosts = ({ posts }) => (
-  <div style={{ margin: "20px 0 40px" }}>
-    {posts.map(({ node }) => {
-      const title = node.frontmatter.title || node.fields.slug
-      return (
-        <div key={node.fields.slug}>
-          <h3
-            style={{
-              marginBottom: rhythm(1 / 4),
-              fontFamily: 'Stix Two Text',
-
-            }}
-          >
-            <Link style={{ boxShadow: `none` }} to={`/blog${node.fields.slug}`}>
-              {title}
-            </Link>
-          </h3>
-          <small style={{
-            fontFamily: 'Zen Kurenaido',
-
-          }}>{node.frontmatter.date}</small>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: node.frontmatter.description || node.excerpt,
-            }}
-          />
-        </div>
-      )
-    })}
-  </div>
-)
+// const AllPosts = ({ posts }) => (
+//   <AllPosts posts={posts}></AllPosts>
+// )
 
 const SearchPosts = ({ posts, localSearchBlog, location, navigate }) => {
   const { search } = queryString.parse(location.search)
@@ -127,7 +100,7 @@ const SearchPosts = ({ posts, localSearchBlog, location, navigate }) => {
 
   return (
     <>
-      <SearchBar>
+      {/* <SearchBar>
         <svg
           focusable="false"
           xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +120,7 @@ const SearchPosts = ({ posts, localSearchBlog, location, navigate }) => {
             setQuery(e.target.value)
           }}
         />
-      </SearchBar>
+      </SearchBar> */}
       {query ? <SearchedPosts results={results} /> : <AllPosts posts={posts} />}
     </>
   )

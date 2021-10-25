@@ -34,10 +34,8 @@ function Bio() {
               }}
             /> */}
             <p>
-              Written by <strong>{author}</strong>
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                Follow me on Twitter
+              <a style={{ color:"black" }} href={`https://frdc.info`}><strong>frdc.info</strong>
+
               </a>
             </p>
           </Container>
