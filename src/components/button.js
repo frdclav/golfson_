@@ -6,6 +6,9 @@ const Button = props => (
 )
 
 const ButtonWrapper = styled.button`
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
   display: block;
   border: none;
   text-align: center;
@@ -15,6 +18,7 @@ const ButtonWrapper = styled.button`
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-family: Zen Kurenaido;
 
   background: ${props => props.props.background || "black"};
   color: ${props => props.props.color || "rgb(255, 255, 255)"};

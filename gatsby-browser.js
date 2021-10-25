@@ -1,3 +1,3 @@
 // custom typefaces
-import "typeface-montserrat"
-import "typeface-merriweather"
+import "@fontsource/zen-kurenaido"
+import "@fontsource/stix-two-text"

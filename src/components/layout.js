@@ -18,6 +18,8 @@ class Layout extends React.Component {
             ...scale(1.5),
             marginBottom: rhythm(1.5),
             marginTop: 0,
+            fontFamily: `Stix Two Text, serif`,
+
           }}
         >
           <Link
@@ -36,7 +38,7 @@ class Layout extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: `Montserrat, sans-serif`,
+            fontFamily: `Stix Two Text, serif`,
             marginTop: 0,
           }}
         >
@@ -78,11 +80,16 @@ class Layout extends React.Component {
 
 const Wrapper = styled.div`
   min-height: 100vh;
+  font-family: 'Stix Two Text';
 `
 
 const Footer = styled.footer`
   text-align: center;
   margin: 24px;
+  font-family: 'Zen Kurenaido';
+
 `
+
+
 
 export default Layout
