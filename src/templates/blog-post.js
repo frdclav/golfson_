@@ -6,6 +6,24 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import styled from "styled-components"
+
+const Header = styled.h1`
+font-family: 'Stix Two Text';
+
+`
+const MarkdownWrapper = styled.div`
+p {
+font-family: 'Stix Two Text';
+
+}
+
+ul {
+list-style-position: inside;
+font-family: 'Stix Two Text';
+
+}
+`
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -19,18 +37,20 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1>{post.frontmatter.title}</h1>
+        <Header>{post.frontmatter.title}</Header>
         <p
           style={{
             ...scale(-1 / 5),
             display: `block`,
             marginBottom: rhythm(1),
             marginTop: rhythm(-1),
+            fontFamily: `Zen Kurenaido`
           }}
         >
           {post.frontmatter.date}
         </p>
-        <MDXRenderer>{post.body}</MDXRenderer>
+        <MarkdownWrapper>
+        <MDXRenderer>{post.body}</MDXRenderer></MarkdownWrapper>
         <hr
           style={{
             marginBottom: rhythm(1),

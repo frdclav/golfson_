@@ -69,6 +69,7 @@ const bioQuery = graphql`
 
 const Container = styled.div`
   display: flex;
+  font-family: Zen Kurenaido;
 `
 
 export default Bio

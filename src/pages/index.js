@@ -16,19 +16,21 @@ class IndexPage extends React.Component {
           keywords={[`rodson`, `golf`]}
         />
         {/* <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" /> */}
-        <h1>
-          under construction
-        </h1>
+        <h2 style={{
+          fontFamily:`Zen Kurenaido,sans-serif`
+        }}>
+        under construction
+      </h2>
         {/* <p>Welcome to your new Gatsby website. You are on your home page.</p>
         <p>
           This starter comes out of the box with styled components and Gatsby's
           default starter blog running on Netlify CMS.
         </p>
         <p>Now go build something great!</p> */}
-        <Link to="/blog/">
-          <Button marginTop="35px">Go to Blog</Button>
-        </Link>
-      </Layout>
+    <Link to="/blog/">
+      <Button marginTop="35px">Go to Blog</Button>
+    </Link>
+      </Layout >
     )
   }
 }

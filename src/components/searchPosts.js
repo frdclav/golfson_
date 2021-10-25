@@ -7,6 +7,9 @@ import * as queryString from "query-string"
 import { rhythm } from "../utils/typography"
 
 const SearchBar = styled.div`
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
   display: flex;
   border: 1px solid #dfe1e5;
   border-radius: 10px;
@@ -14,6 +17,7 @@ const SearchBar = styled.div`
   width: 100%;
   height: 3rem;
   background: #fdfdfd;
+  font-family: Zen Kurenaido;
 
   svg {
     margin: auto 1rem;
@@ -27,8 +31,7 @@ const SearchBar = styled.div`
     display: flex;
     flex: 100%;
     height: 100%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: Zen Kurenaido, sans-serif;
     font-size: 16px;
     background-color: transparent;
     border: none;
@@ -38,6 +41,10 @@ const SearchBar = styled.div`
     color: rgb(55, 53, 47);
     word-wrap: break-word;
     outline: none;
+  }
+
+  p {
+    font-family: Zen Kurenaido;
   }
 `
 
@@ -85,13 +92,18 @@ const AllPosts = ({ posts }) => (
           <h3
             style={{
               marginBottom: rhythm(1 / 4),
+              fontFamily: 'Stix Two Text',
+
             }}
           >
             <Link style={{ boxShadow: `none` }} to={`/blog${node.fields.slug}`}>
               {title}
             </Link>
           </h3>
-          <small>{node.frontmatter.date}</small>
+          <small style={{
+            fontFamily: 'Zen Kurenaido',
+
+          }}>{node.frontmatter.date}</small>
           <p
             dangerouslySetInnerHTML={{
               __html: node.frontmatter.description || node.excerpt,
