@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `golfson`,
+    title: `frdc`,
     author: `francis rodson d. clavel`,
     description: `under maintenance`,
     siteUrl: `https://golfson.netlify.com/`,
